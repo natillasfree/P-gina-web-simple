@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales</title>
+    <link rel="shortcut icon" href="img/rem.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <nav>
+                <a href="index1.html">Inicio</a>
+                <div class="dropdown">
+                    <a href="#">Productos</a>
+                    <div class="dropdown-content">
+                        <a href="#">Face</a>
+                        <a href="#">Lips</a>
+                        <a href="#">Eyes</a>
+                    </div>
+                </div>
+                <a href="tutoriales.html">Videos</a>
+                <a href="#">Servicios</a>
+              
+            </nav>
+            <button class="agregar-carrito">Carrito</button>
+            <input type="text" placeholder="Buscar" class="barra-busqueda">
+        </div>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu">
+            <a href="index1.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#">Productos</a>
+                <div class="dropdown-content">
+                    <a href="#">Face</a>
+                    <a href="#">Lips</a>
+                    <a href="#">Eyes</a>
+                </div>
+            </div>
+            <a href="tutoriales.html">Videos</a>
+            <a href="#">Servicios</a>
+        </div>
+
+
+    <div class="videos">
+        
+            <div class="contenido">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MdLcP8dJls4?si=Pu7sXNRagCpKdDXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Maquillate conmigo-VOGUE</h3>
+            </div>
+            <div class="contenido">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aLx7-yaYlcs?si=KOAhctjfUMhQlIw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Primer Aniversario R.E.M Beauty</h3>
+            </div>
+            <div class="contenido">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HVF8FLlDqnM?si=W6sMZ_3WgxmQJri2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Chapter 2</h3>
+            </div>
+            <div class="contenido"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/b_Q42DUDe0w?si=9Q-8iJeCIIAmIM9i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Chapter 3</h3>
+            </div>
+          
+    </div>
+
+
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://file:///C:/Users/Presta/Downloads/rem3/rem/index1.html">R.E.M Beauty</a> by <span property="cc:attributionName">Natalia Carmona</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var $banner = $(".banner");
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $banner.addClass("scrolled");
+            } else {
+                $banner.removeClass("scrolled");
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+            menu.classList.remove('show');
+        }
+    });
+});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Slab';
+    width: 100%;
+    margin: auto;
+}
+.videos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 90px;
+}
+
+.contenido {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px; 
+}
+
+
+
+footer {
+    padding:40px 0;
+    background-color:#b3b1b1;
+    color:#4b4c4d;
+}
+
+footer .social{
+    text-align:center;
+    padding-bottom:25px;
+}
+
+footer .social>a{
+font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #000000;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+footer .social > a:hover {
+  opacity:0.9;
+}
+
+footer p {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#000000;
+  margin-bottom:0;
+}
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(178, 241, 221);
+    padding: 10px 20px;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner.scrolled {
+    background-color: rgba(241, 234, 234, 0.7) !important;
+    color: #000 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.banner nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.banner a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.agregar-carrito {
+    background-color: #8ec0ba;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.agregar-carrito:hover {
+    background-color: #bababa;
+    color:black;
+}
+
+.barra-busqueda {
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+nav a:not(.dropdown-content a) {
+    color: #000; /* Ajusta el color al resto del texto en el banner */
+    font-size: xx-large;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav a:not(.dropdown-content a):hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .banner .barra-busqueda,
+    .banner .agregar-carrito {
+        display: none; /* Oculta la barra de búsqueda y el botón de carrito */
+    }
+
+    .banner .menu-button {
+        order: 1;
+        margin-top: 10px;
+    }
+
+    .banner nav {
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .banner a {
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width:900px){
+   .banner {
+    display: none;
+    }
+    .menu-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-responsive a {
+        margin: 10px 0;
+    }
+
+    .videos{
+        margin-left: 0px;
+        width: 100%;
+    }
+    .contenido{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+   .banner {
+    display: none;
+}
+
+.menu-responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-responsive a {
+    margin: 10px 0;
+}
+.videos{
+    margin-left: 0px;
+    width: 100%;
+}
+.contenido{
+    width: 100%;
+}
+}
